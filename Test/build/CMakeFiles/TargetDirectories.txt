@@ -1,0 +1,3 @@
+/home/xy/my_ai_chat_sdk/Test/build/CMakeFiles/TestLLM.dir
+/home/xy/my_ai_chat_sdk/Test/build/CMakeFiles/edit_cache.dir
+/home/xy/my_ai_chat_sdk/Test/build/CMakeFiles/rebuild_cache.dir
