@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/TestLLM.dir/TestLLM.cpp.o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o -o TestLLM  -ljsoncpp -lfmt -lspdlog -lgtest /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so -lpthread -ldl 
