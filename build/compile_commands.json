@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/xy/my_ai_chat_sdk/build",
-  "command": "/usr/bin/g++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/home/xy/my_ai_chat_sdk/Test/../sdk/include -g -std=gnu++17 -o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o -c /home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp",
-  "file": "/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp"
+  "command": "/usr/bin/g++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/home/xy/my_ai_chat_sdk/Test/../sdk/include -g -std=gnu++17 -o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o -c /home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp",
+  "file": "/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp"
 },
 {
   "directory": "/home/xy/my_ai_chat_sdk/build",

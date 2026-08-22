@@ -153,29 +153,29 @@ TestLLM.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/TestLLM.cpp.s
 .PHONY : TestLLM.cpp.s
 
-home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.o: home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o
-.PHONY : home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.o
+home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.o: home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o
+.PHONY : home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.o
 
 # target to build an object file
-home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o
-.PHONY : home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o
+home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o
+.PHONY : home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o
 
-home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.i: home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i
-.PHONY : home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.i
+home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.i: home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i
+.PHONY : home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.i
 
 # target to preprocess a source file
-home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i
-.PHONY : home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i
+home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i
+.PHONY : home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i
 
-home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.s: home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s
-.PHONY : home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.s
+home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.s: home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s
+.PHONY : home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.s
 
 # target to generate assembly for a file
-home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s
-.PHONY : home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s
+home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLLM.dir/build.make CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s
+.PHONY : home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s
 
 home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.o: home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o
 .PHONY : home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.o
@@ -213,9 +213,9 @@ help:
 	@echo "... TestLLM.o"
 	@echo "... TestLLM.i"
 	@echo "... TestLLM.s"
-	@echo "... home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.o"
-	@echo "... home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.i"
-	@echo "... home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.s"
+	@echo "... home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.o"
+	@echo "... home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.i"
+	@echo "... home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.s"
 	@echo "... home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.o"
 	@echo "... home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.i"
 	@echo "... home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.s"

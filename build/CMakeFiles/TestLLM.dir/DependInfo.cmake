@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/xy/my_ai_chat_sdk/Test/TestLLM.cpp" "CMakeFiles/TestLLM.dir/TestLLM.cpp.o" "gcc" "CMakeFiles/TestLLM.dir/TestLLM.cpp.o.d"
-  "/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp" "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o" "gcc" "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o.d"
+  "/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp" "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o" "gcc" "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o.d"
   "/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp" "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o" "gcc" "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o.d"
   )
 

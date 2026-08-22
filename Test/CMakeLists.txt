@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #设置构建类型
 set(CMAKE_BUILD_TYPE Debug)
 #添加可执行文件
-add_executable(TestLLM TestLLM.cpp ../sdk/src/DeepseekProvider.cpp ../sdk/src/util/my_spdlog.cpp)
+add_executable(TestLLM TestLLM.cpp ../sdk/src/ChatgptProvider.cpp ../sdk/src/util/my_spdlog.cpp)
 
 #设置输出目录
 set_target_properties(TestLLM PROPERTIES EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/build)

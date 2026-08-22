@@ -83,19 +83,19 @@ CMakeFiles/TestLLM.dir/TestLLM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestLLM.dir/TestLLM.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xy/my_ai_chat_sdk/Test/TestLLM.cpp -o CMakeFiles/TestLLM.dir/TestLLM.cpp.s
 
-CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o: CMakeFiles/TestLLM.dir/flags.make
-CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o: /home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp
-CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o: CMakeFiles/TestLLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xy/my_ai_chat_sdk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o -MF CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o.d -o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o -c /home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp
+CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o: CMakeFiles/TestLLM.dir/flags.make
+CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o: /home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp
+CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o: CMakeFiles/TestLLM.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xy/my_ai_chat_sdk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o -MF CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o.d -o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o -c /home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp
 
-CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp > CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.i
+CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp > CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.i
 
-CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp -o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.s
+CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp -o CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.s
 
 CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: CMakeFiles/TestLLM.dir/flags.make
 CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp
@@ -114,14 +114,14 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.s: cmak
 # Object files for target TestLLM
 TestLLM_OBJECTS = \
 "CMakeFiles/TestLLM.dir/TestLLM.cpp.o" \
-"CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o" \
+"CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o" \
 "CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o"
 
 # External object files for target TestLLM
 TestLLM_EXTERNAL_OBJECTS =
 
 TestLLM: CMakeFiles/TestLLM.dir/TestLLM.cpp.o
-TestLLM: CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o
+TestLLM: CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o
 TestLLM: CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o
 TestLLM: CMakeFiles/TestLLM.dir/build.make
 TestLLM: /usr/lib/x86_64-linux-gnu/libssl.so

@@ -328,13 +328,6 @@ CMakeFiles/TestLLM.dir/TestLLM.cpp.o: ../TestLLM.cpp \
   /usr/include/spdlog/version.h \
   /usr/include/spdlog/details/synchronous_factory.h \
   /usr/include/spdlog/spdlog-inl.h \
-  /home/xy/my_ai_chat_sdk/sdk/include/DeepseekProvider.h \
-  /home/xy/my_ai_chat_sdk/sdk/include/LLMProvider.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /home/xy/my_ai_chat_sdk/sdk/include/common.h \
   /usr/include/gtest/gtest.h \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -396,6 +389,10 @@ CMakeFiles/TestLLM.dir/TestLLM.cpp.o: ../TestLLM.cpp \
   /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
@@ -415,11 +412,14 @@ CMakeFiles/TestLLM.dir/TestLLM.cpp.o: ../TestLLM.cpp \
   /usr/include/gtest/gtest-test-part.h \
   /usr/include/gtest/gtest_prod.h \
   /usr/include/gtest/gtest-typed-test.h \
-  /usr/include/gtest/gtest_pred_impl.h
+  /usr/include/gtest/gtest_pred_impl.h \
+  /home/xy/my_ai_chat_sdk/sdk/include/ChatgptProvider.h \
+  /home/xy/my_ai_chat_sdk/sdk/include/LLMProvider.h \
+  /home/xy/my_ai_chat_sdk/sdk/include/common.h
 
-CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o: /home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp \
+CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp.o: /home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp \
   /usr/include/stdc-predef.h \
-  /home/xy/my_ai_chat_sdk/sdk/include/DeepseekProvider.h \
+  /home/xy/my_ai_chat_sdk/sdk/include/ChatgptProvider.h \
   /home/xy/my_ai_chat_sdk/sdk/include/LLMProvider.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_algobase.h \
@@ -926,6 +926,7 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp.o: /h
   /usr/include/jsoncpp/json/value.h \
   /usr/include/jsoncpp/json/writer.h \
   /usr/include/jsoncpp/json/reader.h \
+  /usr/include/jsoncpp/json/value.h \
   /home/xy/my_ai_chat_sdk/sdk/include/util/my_spdlog.h \
   /usr/include/spdlog/spdlog.h \
   /usr/include/spdlog/common.h \
@@ -1809,10 +1810,6 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 
 /usr/include/linux/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
 /usr/include/c++/11/iostream:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -1842,8 +1839,6 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 /usr/include/spdlog/sinks/base_sink-inl.h:
 
 /usr/include/c++/11/type_traits:
-
-/usr/include/c++/11/bits/allocator.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
@@ -1945,6 +1940,10 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
+/usr/include/c++/11/bits/allocator.h:
+
+/home/xy/my_ai_chat_sdk/sdk/src/ChatgptProvider.cpp:
+
 /usr/include/spdlog/sinks/stdout_color_sinks-inl.h:
 
 /usr/include/c++/11/vector:
@@ -2002,6 +2001,12 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 /usr/include/unistd.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/home/xy/my_ai_chat_sdk/sdk/include/ChatgptProvider.h:
 
 /usr/include/c++/11/cwchar:
 
@@ -2107,8 +2112,6 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 
-/home/xy/my_ai_chat_sdk/sdk/src/DeepseekProvider.cpp:
-
 /usr/include/spdlog/details/circular_q.h:
 
 /usr/include/c++/11/cassert:
@@ -2152,18 +2155,6 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 /usr/include/spdlog/sinks/ansicolor_sink-inl.h:
 
 /usr/include/spdlog/details/synchronous_factory.h:
-
-/home/xy/my_ai_chat_sdk/sdk/include/DeepseekProvider.h:
-
-/usr/include/c++/11/map:
-
-/usr/include/openssl/dherr.h:
-
-/usr/include/c++/11/bits/stl_multimap.h:
-
-/usr/include/c++/11/pstl/glue_algorithm_defs.h:
-
-/home/xy/my_ai_chat_sdk/sdk/include/common.h:
 
 /usr/include/gtest/gtest.h:
 
@@ -2277,6 +2268,12 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 
+/usr/include/c++/11/map:
+
+/usr/include/openssl/dherr.h:
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/c++/11/set:
@@ -2312,6 +2309,10 @@ CMakeFiles/TestLLM.dir/home/xy/my_ai_chat_sdk/sdk/src/util/my_spdlog.cpp.o: /hom
 /usr/include/gtest/gtest_pred_impl.h:
 
 /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
+
+/usr/include/c++/11/pstl/glue_algorithm_defs.h:
+
+/home/xy/my_ai_chat_sdk/sdk/include/common.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
