@@ -1,4 +1,4 @@
-#include"DeepseekProvider.h"
+#include"../include/DeepseekProvider.h"
 #include<httplib.h>
 #include<jsoncpp/json/json.h>
 #include <jsoncpp/json/reader.h>
