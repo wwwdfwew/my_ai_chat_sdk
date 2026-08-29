@@ -109,7 +109,7 @@ TEST(ChatgptProvider,SendMessageStream)
     ASSERT_TRUE(!response.empty());
     INFO("Chatgpt model response is:{}",response);
 }
-#endif
+#
 TEST(ollamaLLMProvider,SendMessage)
 {
     ai_chat_sdk::OllamaProviderLLM Provider;
@@ -144,6 +144,40 @@ TEST(ollamaLLMProvider,SendMessage)
     INFO("deepseek-r1:1.5b model response is:{}",response);
 }
 
+#endif
+TEST(ollamaLLMProvider,SendMessage)
+{
+    ai_chat_sdk::OllamaProviderLLM Provider;
+    auto pragma=std::map<std::string,std::string>();
+    pragma["modelName"]="deepseek-r1:1.5b";
+    pragma["modelDesc"]="这是由深度求索公司开发的思考推理模型——deepseek-r1:1.5b";
+    Provider.ModelInit(pragma);
+    ASSERT_TRUE(Provider.is_Available());
+    std::vector<ai_chat_sdk::Message> messages;
+    ai_chat_sdk::Message message;
+    message._role="user";
+    message._content="帮我写一个快速排序的代码";
+    messages.push_back(message);
+    auto requestParams=std::map<std::string,std::string>({{"temperature","0.7"},{"num_ctx","2048"}});
+    auto callback=[&](const std::string& inf,bool is_end)
+    {
+        INFO("{} model response content is:{}",Provider.ModelName(),inf);
+        if(is_end)
+        {
+            INFO("[DONE]");
+        }
+    };
+   auto response=Provider.SendMessageStream(messages,requestParams,callback);
+   ASSERT_TRUE(!response.empty());
+   INFO("{} model response is:{}",Provider.ModelName(),response);
+    // ai_chat_sdk::Message message2;
+    // message2._role="user";
+    // message2._content="我是谁";
+    // messages.push_back(message2);
+    // response=Provider.SendMessageStream(messages,requestParams,callback);
+    // ASSERT_TRUE(!response.empty());
+    // INFO("{} model response is:{}",Provider.ModelName(),response);
+}
 int main(int argc,char** argv)
 {
     // auto logger=ai_chat_sdk::my_Logger::get_logger();
