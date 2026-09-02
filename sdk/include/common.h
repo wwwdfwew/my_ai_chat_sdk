@@ -8,10 +8,10 @@ namespace ai_chat_sdk
     //模型消息结构
      struct Message
     {
-        int id;//消息ID
+        std::string _message_id;//消息ID
         std::string _role;//角色
         std::string _content;//消息内容
-        time_t time;//消息时间
+        time_t _create_time;//消息发送时间
     };
 
     //模型的公共配置信息
@@ -32,11 +32,13 @@ namespace ai_chat_sdk
     //会话信息
     struct Session
     {
-        int session_id;//会话ID
+        std::string session_id;//会话ID
         std::string ModelName;//会话模型名称
         std::vector<Message> messages;//会话消息列表
         time_t create_time;//会话创建时间
-        time_t revise_time;//会话修改时间
+        time_t update_time;//会话修改时间
+        Session(const std::string& model_name=""):ModelName(model_name){}//初始化会话信息
+    
     };
     //模型描述信息
     struct ModelDesc
