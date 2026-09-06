@@ -36,6 +36,22 @@ build/
 Test/build/
 cmake-build-*/
 
+# 编译输出目录
+bin/
+lib/
+
+# IDE 配置（VSCode）
+.vscode/
+
+# 缓存目录
+.cache/
+
+# 大型二进制文件（如果不需要版本控制）
+ollama-linux-amd64.tar.zst
+
+# 可选：忽略可执行脚本（如果你不希望上传）
+install.sh
+
 # CMake 生成的临时文件
 CMakeCache.txt
 CMakeFiles/
