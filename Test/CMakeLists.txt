@@ -10,7 +10,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #设置构建类型
 set(CMAKE_BUILD_TYPE Debug)
 #添加可执行文件
-add_executable(TestLLM TestLLM.cpp  ../sdk/src/ChatgptProvider.cpp ../sdk/src/util/my_spdlog.cpp ../sdk/src/ollamaProvider.cpp)
+add_executable(TestLLM TestLLM.cpp  
+                ../sdk/src/ChatgptProvider.cpp 
+                ../sdk/src/util/my_spdlog.cpp 
+                ../sdk/src/ollamaProvider.cpp 
+                ../sdk/src/DeepseekProvider.cpp 
+                ../sdk/src/ChatSDK.cpp 
+                ../sdk/src/SessionManage.cpp
+                ../sdk/src/DataManager.cpp
+                ../sdk/src/LLMManager.cpp)
 
 #设置输出目录
 set_target_properties(TestLLM PROPERTIES EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/build)
@@ -21,6 +29,6 @@ target_include_directories(TestLLM PRIVATE ${OPENSSL_INCLUDE_DIR})
 
 #链接库
 target_link_libraries(TestLLM jsoncpp fmt spdlog gtest OpenSSL::SSL OpenSSL::Crypto pthread
-    dl)
+    dl sqlite3)
 #设置CPPhttplib支持https
 target_compile_definitions(TestLLM PRIVATE CPPHTTPLIB_OPENSSL_SUPPORT)

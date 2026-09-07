@@ -23,8 +23,8 @@ namespace ai_chat_sdk
         it=config.find("base_url");
        if(it==config.end())
        {
-       ERR("Deepseek base_url is not find");
-        is_Available_=false;
+     base_url="https://api.deepseek.com/v1";
+     is_Available_=true;
        }
        else
        {

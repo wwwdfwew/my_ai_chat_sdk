@@ -112,7 +112,7 @@ namespace ai_chat_sdk
     }
 
     //获取数据库中的指定会话的信息
-    std::shared_ptr<Session> DataManager::GetSession(const std::string& session_id)const
+    std::shared_ptr<Session> DataManager::GetSession(const std::string& session_id)
     {
         //设置线程安全锁
         std::lock_guard<std::mutex> lock(_mutex);
@@ -132,9 +132,11 @@ namespace ai_chat_sdk
         sqlite3_bind_text(stmt, 1, session_id.c_str(), -1, SQLITE_STATIC);
         //检查没有问题之后执行语句
         auto result=sqlite3_step(stmt);
-        if(result!=SQLITE_DONE)
+        if(result!=SQLITE_ROW)
         {
             ERR("GetSession执行sql语句失败:{}",sqlite3_errmsg(_db));
+            //释放stmt对象
+            sqlite3_finalize(stmt);
             return nullptr;
         }
         //创建一个Session对象
@@ -238,6 +240,48 @@ namespace ai_chat_sdk
         return true;
     }
     
+    std::vector<std::shared_ptr<Session>> DataManager::GetAllSessions()
+    {
+         std::lock_guard<std::mutex> lock(_mutex);
+
+    // 构建SQL语句
+    std::string selectSQL = R"(
+        SELECT session_id, ModelName, create_time, update_time FROM Session ORDER BY update_time DESC;
+    )";
+
+    // 准备SQL语句
+    sqlite3_stmt* stmt;
+    int rc = sqlite3_prepare_v2(_db, selectSQL.c_str(), -1, &stmt, nullptr);
+    if(rc != SQLITE_OK){
+        ERR("getAllSessionIds - 准备语句失败：{}", sqlite3_errmsg(_db));
+        return {};
+    }
+
+    std::vector<std::shared_ptr<Session>> sessions;
+    while(sqlite3_step(stmt) == SQLITE_ROW){
+        std::string sessionId = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        std::string modelName = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        int64_t createTime = sqlite3_column_int64(stmt, 2);
+        int64_t updateTime = sqlite3_column_int64(stmt, 3);
+
+        auto session = std::make_shared<Session>(modelName);
+        session->session_id = sessionId;
+        session->create_time = static_cast<std::time_t>(createTime);
+        session->update_time = static_cast<std::time_t>(updateTime);
+        sessions.push_back(session);
+
+        // 历史消息暂时不获取，需要时再通过会话id来进行获取
+    }
+
+    // 释放语句
+    sqlite3_finalize(stmt);
+    INFO("getAllSessions - 获取所有会话信息成功, 会话总数：{}", sessions.size());
+    return sessions;
+    }
+
+
+
+
 
     //获取会话总数
     int DataManager::GetSessionCount()const
@@ -375,4 +419,36 @@ namespace ai_chat_sdk
         sqlite3_finalize(stmt);
         return true;
     }
+
+
+
+    bool DataManager::DeleteAllSessions()//用来删除数据库中的所有会话信息
+    {
+        //sql语句
+        std::string sql_sql = R"(
+        DELETE FROM Session
+        )";
+        //准备sql语句
+        sqlite3_stmt* stmt;
+        auto rs=sqlite3_prepare_v2(_db, sql_sql.c_str(), -1, &stmt, nullptr);
+        if(rs!=SQLITE_OK)
+        {
+            ERR("DeleteAllSessions准备sql语句失败:{}",sqlite3_errmsg(_db));
+            return false;
+        }
+        //检查没有问题之后执行语句
+        auto result=sqlite3_step(stmt);
+        if(result!=SQLITE_DONE)
+        {
+            ERR("DeleteAllSessions执行sql语句失败:{}",sqlite3_errmsg(_db));
+            return false;
+        }
+        INFO("DeleteAllSessions删除所有会话成功");
+        //释放stmt对象
+        sqlite3_finalize(stmt);
+        return true;
+    }
+
+
+
 }    

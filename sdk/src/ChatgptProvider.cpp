@@ -6,6 +6,7 @@
 #include <net/if.h>
 #include <sstream>
 #include"../include/util/my_spdlog.h"
+#include"../include/common.h"
 
 namespace ai_chat_sdk
 {
@@ -24,7 +25,7 @@ namespace ai_chat_sdk
        base_url=config["base_url"];
        }
        else{
-       return false;
+       base_url="https://api.openai.com/";
        }
        
        is_Available_=true;//模型初始化成功

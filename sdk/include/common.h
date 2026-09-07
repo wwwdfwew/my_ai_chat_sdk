@@ -1,8 +1,8 @@
+#pragma once
 #include<string>
 #include<vector>
 #include<map>
 #include<ctime>
-
 namespace ai_chat_sdk
 {
     //模型消息结构
@@ -12,6 +12,7 @@ namespace ai_chat_sdk
         std::string _role;//角色
         std::string _content;//消息内容
         time_t _create_time;//消息发送时间
+       // Message(const std::string& role,const std::string& content):_role(role),_content(content){}//初始化消息
     };
 
     //模型的公共配置信息
@@ -20,14 +21,24 @@ namespace ai_chat_sdk
         std::string ModelName;//模型名称
         double Temperature;//温度值
         int Max_takens;//最大token数
+        virtual ~ModelConfig()=default;//默认析构函数
     };
 
     //模型接入方式
     //通过API接入：需要配置模型Api_key
-    struct Connect_API:public ModelConfig
+    struct APIConfig:public ModelConfig
     {
         std::string Api_key;//模型Api_key
     };
+    //通过ollama本地的方式接入
+    struct ollamaConfig:public ModelConfig
+    {
+        std::string ModelName;//模型名称
+        std::string ModelDesc;//模型描述
+        std::string base_url;//ollama本地基础URL
+    };
+
+
 
     //会话信息
     struct Session
@@ -40,8 +51,8 @@ namespace ai_chat_sdk
         Session(const std::string& model_name=""):ModelName(model_name){}//初始化会话信息
     
     };
-    //模型描述信息
-    struct ModelDesc
+    //模型信息
+    struct ModelInfo
     {
         std::string ModelName;//模型名称
         std::string ModelDesc;//模型描述

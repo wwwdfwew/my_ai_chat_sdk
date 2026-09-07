@@ -1,4 +1,5 @@
 //将会话存储到数据库中，我们这里的操作和对会话管理的操作是有一点类似的，只不过代码语句是对数据库的操作
+#pragma once
 #include <memory>
 #include <mutex>
 #include <sqlite3.h>
@@ -16,7 +17,7 @@ DataManager(const std::string& db_Name);//用来创建数据库
 //向数据库中插入一条会话
 bool InsertSession(const Session& session);//用来插入一条会话到数据库中
 //获取数据库中的指定会话的信息
-std::shared_ptr<Session> GetSession(const std::string& session_id)const;//根据会话id,来获取数据库中指定的会话信息
+std::shared_ptr<Session> GetSession(const std::string& session_id);//根据会话id,来获取数据库中指定的会话信息
 //更新数据库中的会话时间戳
 bool UpdateSessionTime(const std::string& session_id,std::time_t update_time);//根据会话id,来更新数据库中的会话时间戳
 //获取数据库中的所有会话信息
@@ -28,6 +29,9 @@ bool DeleteSession(const std::string& session_id);//根据会话id,来删除数�
 
 //获取会话总数
 int GetSessionCount()const;//用来查询数据库中的会话总数
+
+//删除所有的会话
+bool DeleteAllSessions();//用来删除数据库中的所有会话信息
 
 
 /////////////////////////////////////

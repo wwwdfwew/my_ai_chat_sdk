@@ -1,3 +1,4 @@
+#pragma once
 #include "LLMProvider.h"
 
 namespace ai_chat_sdk
