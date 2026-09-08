@@ -144,7 +144,18 @@ namespace ai_chat_sdk
         return true;
     }
 
-
+    //获取所有的可用模型
+    std::vector<ModelInfo> ChatSDK::ChatSDKGetAvailableModels()
+    {
+        return _llmManager.GetAvailableModels();
+    }
+    
+    //获取所有的会话id
+    std::vector<std::string> ChatSDK::ChatSDKGetSessionLists()
+    {
+        return _sessionManage.GetAllSessionIds();
+    }
+    
     //初始化SDK
     void ChatSDK::ChatSDKInit(const std::vector<std::shared_ptr<ModelConfig>>& _configs)
     {

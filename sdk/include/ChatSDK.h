@@ -16,12 +16,16 @@ public:
     void ChatSDKInit(const std::vector<std::shared_ptr<ModelConfig>>& _configs);
     //检测SDK是否可用
     bool ChatSDKCheckAvailable();
+    //获取所有的可用模型
+    std::vector<ModelInfo> ChatSDKGetAvailableModels();
     //创建会话
     std::string ChatSDKCreateSession(const std::string& modelName);
     //获取指定会话信息
     std::shared_ptr<Session> ChatSDKGetSession(std::string& sessionId);
     //获取会话中的所有消息
     std::vector<Message> ChatSDKGetSessionMessages(std::string& sessionId);
+    //获取会话列表
+    std::vector<std::string> ChatSDKGetSessionLists();
     //删除指定会话
     bool ChatSDKDeleteSession(std::string& sessionId);
 

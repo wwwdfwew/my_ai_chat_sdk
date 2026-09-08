@@ -1,4 +1,4 @@
-#pragma once
+
 #include "../include/LLMManager.h"
 #include"../include/util/my_spdlog.h"
 namespace ai_chat_sdk
@@ -33,14 +33,14 @@ namespace ai_chat_sdk
       return true;
     }
     //获取所有的可用模型
-    std::vector<std::string> LLMManager::GetAvailableModels()
+    std::vector<ModelInfo> LLMManager::GetAvailableModels()
     {
-        std::vector<std::string> models;
+        std::vector<ModelInfo> models;
         for(auto& it:_modelInfos)
         {
             if(it.second.is_Available)
             {
-                models.push_back(it.first);
+                models.push_back(it.second);
             }
         }
         return models;

@@ -19,7 +19,7 @@ namespace ai_chat_sdk
         //初始化模型提供者
         bool InitModelProvider(const std::string& model_name,const std::map<std::string,std::string>& pragma);
         //获取可用模型
-        std::vector<std::string> GetAvailableModels();
+        std::vector<ModelInfo> GetAvailableModels();
         //检测模型是否可用
         bool IsModelAvailable(const std::string& model_name);
         //发送消息：全量返回
