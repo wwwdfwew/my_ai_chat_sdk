@@ -1,80 +1,67 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# ============ 编译产物 ============
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
+*.a
+*.lib
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
 *.out
 *.app
+*.gch
+*.pch
+*.d
+*.lo
+*.slo
+*.la
+*.lai
+*.mod
+*.smod
 
-# 构建目录（CMake 生成的所有内容）
-build/
-Test/build/
-cmake-build-*/
+# ============ CMake 构建目录（保留前端 www） ============
+# 忽略所有 build 目录下的内容，但保留 ChatServer/build/www 前端页面
+**/build/*
+!**/build/www/
+!**/build/www/**
 
-# 编译输出目录
-bin/
-lib/
-
-# IDE 配置（VSCode）
-.vscode/
-
-# 缓存目录
-.cache/
-
-# 大型二进制文件（如果不需要版本控制）
-ollama-linux-amd64.tar.zst
-
-# 可选：忽略可执行脚本（如果你不希望上传）
-install.sh
-
-# CMake 生成的临时文件
+# CMake 生成的散落文件
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
+compile_commands.json
 Makefile
 *.cmake
 !CMakeLists.txt
 
-# 环境变量和密钥文件（永远不要提交！）
+# ============ 运行时生成 ============
+*.db
+*.conf
+logs
+*.log
+
+# ============ 编译输出目录 ============
+bin/
+lib/
+
+# ============ IDE / 缓存 ============
+.vscode/
+.idea/
+.cache/
+*.swp
+*.swo
+*~
+
+# ============ 大型二进制文件 ============
+ollama-linux-amd64.tar.zst
+
+# ============ 密钥文件 ============
 .env
 .env.*
 *.key
 *.pem
 *.crt
 
-# IDE 配置（VSCode、CLion、Vim 等）
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# 日志和备份
-*.log
-*.bak
-*.backup
+# ============ 空文件 / 临时脚本 ============
+install.sh
+sudo
