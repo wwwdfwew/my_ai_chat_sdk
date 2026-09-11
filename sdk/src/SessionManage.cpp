@@ -146,6 +146,7 @@ bool SessionManage::AddMessage(const std::string &session_id,
   Message Mag;
   Mag._role=message._role;
   Mag._content=message._content;
+  Mag._create_time=message._create_time;
   Mag._message_id=BuildMessageId(session->messages.size());//用size()获取会话中历史消息列表的大小
   session->messages.push_back(Mag);
   //将消息存储到数据库中

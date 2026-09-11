@@ -32,7 +32,9 @@
     function formatTimestamp(ts) {
         if (!ts) return '';
         const n = Number(ts);
+        if (!Number.isFinite(n) || n <= 0) return '';
         const d = new Date(n < 1e12 ? n * 1000 : n);
+        if (Number.isNaN(d.getTime())) return '';
         const pad = (v) => String(v).padStart(2, '0');
         const now = new Date();
         const sameDay = d.toDateString() === now.toDateString();

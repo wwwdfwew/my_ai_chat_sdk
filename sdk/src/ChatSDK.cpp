@@ -246,6 +246,9 @@ namespace ai_chat_sdk
         newMessage._role="user";
         newMessage._content=message;
         messages.push_back(newMessage);
+        //更新消息发送时间
+        newMessage._create_time=std::time(nullptr);
+        _sessionManage.AddMessage(sessionId,newMessage);
         
         //请求参数
         std::map<std::string,std::string> requestParams;
@@ -262,7 +265,8 @@ namespace ai_chat_sdk
         Message message_;
         message_._role="assistant";
         message_._content=response;
-        messages.push_back(message_);
+        //更新消息发送时间
+        message_._create_time=std::time(nullptr);
        
         //将得到的消息更新到会话当中
         _sessionManage.AddMessage(sessionId,message_);
@@ -305,6 +309,9 @@ namespace ai_chat_sdk
         newMessage._role="user";
         newMessage._content=message;
         messages.push_back(newMessage);
+        //更新消息发送时间
+        newMessage._create_time=std::time(nullptr);
+        _sessionManage.AddMessage(sessionId,newMessage);
         
         //请求参数
         std::map<std::string,std::string> requestParams;
@@ -321,8 +328,8 @@ namespace ai_chat_sdk
         Message message_;
         message_._role="assistant";
         message_._content=response;
-        messages.push_back(message_);
-       
+       //更新消息发送时间
+        message_._create_time=std::time(nullptr);
         //将得到的消息更新到会话当中
         _sessionManage.AddMessage(sessionId,message_);
         return response;
